@@ -1,4 +1,4 @@
-from main import greet
+from Python_Concepts.main import greet
 
 greet("code assistant")
 print("Import file executed successfully.")

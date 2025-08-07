@@ -52,13 +52,15 @@
 l=[1,"two",3.0,"four",4,9]
 
 # extarcting related data types and sorting
-ints=sorted(x for x in l if isinstance(x,int))
-strings=sorted(x for x in l if isinstance(x,str),key=len)
+ints = sorted(x for x in l if isinstance(x, int))
+strings = sorted((x for x in l if isinstance(x, str)), key=len)
+final_list = ints + strings
 print(ints)
 print(strings)
+
   
 #  sorting based on position of the character
 data = [("a", 3), ("b", 1), ("c", 2)]
-sorted_data = sorted(data, key=lambda x: x[0])
+sorted_data = sorted(data, key=lambda x: x[1])
 print(sorted_data)  # [('b', 1), ('c', 2), ('a', 3)]
 

@@ -11,13 +11,19 @@ class BankAccount:
         bal = self.__balance
         print(f"Your Account Balance is, {bal}.")
     
-    def set_Deposit(self,amount):
-        if amount > 0 :
-            self.__balance += amount
-            print(f"Amount has Deposited, {amount}")
-        else:
-            print("Invalid Amount")
-    
+    def set_Deposit(self):
+        try:
+            amount = float(input("Enter the Amount: "))
+            if amount < 0:
+                print("Invalid Amount")
+            else:
+                self.__balance += amount
+                print(f"Amount has been deposited: {amount}")
+        except ValueError:
+            print("Please enter a valid number.")
+        finally:
+            print("Transaction Completed, Have a Good Day.....")
+      
     def Withdraw_Amount(self,Withdraw_amt):
         if Withdraw_amt > self.__balance :
             print("Dont Have Sufficient Balance.")
@@ -38,6 +44,8 @@ User_One.get_UserDetails()
 User_One.Withdraw_Amount(2000)
 
 User_One.get_Balance()
+
+User_One.set_Deposit()
 
 # Getter is Used to Read the Private Varible Value.
 

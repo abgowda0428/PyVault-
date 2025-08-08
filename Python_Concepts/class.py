@@ -50,3 +50,37 @@ when we Intilize the Constructor Method in the Child Class.
 and multiple inheritance is also used in this code.
 for maintaining the sequence of Excetion of Class Accordinly.
 '''
+
+class Lokesh:
+
+    def __new__(cls,*args,**kwargs):
+        print("Object Created")
+        return super().__new__(cls)
+    
+    def __init__(self,*args,**kwargs):
+         print("Values added To the Object")
+         self.name = args
+         self.ex = kwargs
+
+    def __str__(self):
+        m =  self.name[0]
+        return str(m)
+
+    def __add__(self,Others):
+        list_val = self.ex["c"]
+        tup_val = self.name[0]
+
+        total = 0
+        
+        for value in list_val:
+            total += value + tup_val       
+        return total   
+
+    def run(self):
+        return f"{self.name}and this is lokesh Ex {self.ex}"
+
+s = Lokesh(5,b = "abhishek", c= [1,2,3,4,5])
+
+print(s)
+print(s + 0)
+

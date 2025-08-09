@@ -6,6 +6,11 @@ class BankAccount:
         self.Name = name
         self._BankName = "SBI"
         self.__balance = balance
+    
+    def BankName(self):
+        Updated_BankName = input("Enter the Bank Name: ")
+        self._BankName = Updated_BankName
+        print(f"Your Bank Name is, {self._BankName}.")
 
     def get_Balance(self):
         bal = self.__balance
@@ -46,6 +51,8 @@ User_One.Withdraw_Amount(2000)
 User_One.get_Balance()
 
 User_One.set_Deposit()
+
+User_One.BankName()
 
 # Getter is Used to Read the Private Varible Value.
 

@@ -12,6 +12,7 @@ def Sum(n = input("Enter a number: ")):
         print("Execution completed.")
 
 # Example usage
+
 Sum(0)  # This will raise a ZeroDivisionError
 Sum(5)  # This will not raise an error
         # print("Execution completed.")

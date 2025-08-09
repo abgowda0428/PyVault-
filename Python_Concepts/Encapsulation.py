@@ -6,6 +6,11 @@ class BankAccount:
         self.Name = name
         self._BankName = "SBI"
         self.__balance = balance
+    
+    def BankName(self):
+        Updated_BankName = input("Enter the Bank Name: ")
+        self._BankName = Updated_BankName
+        print(f"Your Bank Name is, {self._BankName}.")
 
     def get_Balance(self):
         bal = self.__balance
@@ -47,12 +52,16 @@ User_One.get_Balance()
 
 User_One.set_Deposit()
 
+User_One.BankName()
+
 # Getter is Used to Read the Private Varible Value.
 
 # Setter is Used to Update Private Varible Safely(With Validation).
 
-# Yes, We can Change the Protect Varible Value ,But But the convention tells developers: "Don't modify me unless you're in a subclass."
+# Yes, We can Change the Protect Varible Value ,
+# But But the convention tells developers: "Don't modify me unless you're in a subclass."
 
-# Yes ,We can Access the Value of Private alo by this but ,So technically it's possible, but discouraged. Private variables enforce data hiding.
+# Yes ,We can Access the Value of Private alo by this but ,So technically it's possible, but discouraged.
+#  Private variables enforce data hiding.
 
 print(User_One._BankAccount__balance)

@@ -51,8 +51,10 @@ User_One.set_Deposit()
 
 # Setter is Used to Update Private Varible Safely(With Validation).
 
-# Yes, We can Change the Protect Varible Value ,But But the convention tells developers: "Don't modify me unless you're in a subclass."
+# Yes, We can Change the Protect Varible Value ,
+# But But the convention tells developers: "Don't modify me unless you're in a subclass."
 
-# Yes ,We can Access the Value of Private alo by this but ,So technically it's possible, but discouraged. Private variables enforce data hiding.
+# Yes ,We can Access the Value of Private alo by this but ,So technically it's possible, but discouraged.
+#  Private variables enforce data hiding.
 
 print(User_One._BankAccount__balance)

@@ -17,6 +17,8 @@ print(Company.Shope_Floor("Mazzak","Tusnami"))   #Using Class
 # Class Method It will inhert the from base class and take the Varible reference form the sub class if 
 # present or It will refer to Base Class Varible.
 
+# Class Method
+
 class Dog:
    
     Bark = "Bow Bow..."
@@ -53,10 +55,10 @@ print(P1.UserName,P1.UserAge)
 print(P2.UserName,P2.UserAge)
 
 
-"""he provided code defines a Person class with an __init__ method (the standard constructor)
- and a class method from_birth_year (an alternative or "custom" constructor).
+"""he provided code defines a Birday class with an __init__ method (the standard constructor)
+ and a class method from BirthdayUser (an alternative or "custom" constructor).
  It then creates two instances: p1 using the standard constructor and p2 using the custom class method.
  """
-# then returns a new instance by calling cls(name, age)—which is equivalent to Person(name, age). 
+# then returns a new instance by calling cls(name, age)—which is equivalent to Birday(name, age). 
 # This doesn't create a "custom instance" type;
 #  it's just a convenient alternative way to instantiate the class without directly providing age.

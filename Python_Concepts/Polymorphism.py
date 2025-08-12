@@ -34,7 +34,7 @@ class Addition:
 
     def add(self):
         total = 0 
-        for value in self.Value_1:
+        for value in self.Value_1:              
             total += value
         return total
     
@@ -45,10 +45,18 @@ class Addition:
 addition = Addition(1,2,3,4,5,6)
 print(addition)
 
-# In this The Animal class defines a generic speak method.
-# Dog and Cat classes override the speak method with their own implementations.
-# When speak is called on a list of Animal objects.but also Inherit the Properties from Parent/Base Class.
-# Python determines the actual type of each object at runtime and calls the appropriate speak method.
+""" 
+if a single method in Python is handling many different numbers or types of parameters,
+ it will almost always be written using:
+Default parameters → to allow optional values
+*args → to accept any number of extra positional arguments
+**kwargs → to accept any number of extra keyword arguments
+"""
+
+# In this The Animal class defines a generic Animalsound method.
+# Dog and Cat classes override the Animalsound method with their own implementations.
+# When Animalsound is called on a list of Animal objects.but also Inherit the Properties from Parent/Base Class.
+# Python determines the actual type of each object at runtime and calls the appropriate Animalsound method.
 
 # Opeator Overloading in Python
 

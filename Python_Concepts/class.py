@@ -84,3 +84,21 @@ s = Lokesh(5,b = "abhishek", c= [1,2,3,4,5])
 print(s)
 print(s + 0)
 
+# Non Parametrisied  Constructor. 
+
+class Office: 
+
+    workers="sdaf"
+
+    def __init__(self):
+        self.name = "abhi"
+        self.age = 23
+        self.address = "Whitefield, Banglore."
+    
+    def __str__(self):
+        return (f"......{self.name},and......{self.age}")
+
+Prajeet = Office()
+print(Prajeet.name)
+print(Prajeet.address)
+print(Prajeet)

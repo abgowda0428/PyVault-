@@ -1,6 +1,12 @@
 # Static Methods
 
 # These  Methods behave like normal functions Inside the Class .
+'''
+A static method in Python is a method inside a class that does not need:
+   **self (object reference)
+   **cls (class reference)
+It behaves just like a normal function, but is placed inside a class for organization.
+'''
 
 class Company:
 

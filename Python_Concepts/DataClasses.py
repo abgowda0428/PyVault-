@@ -1,10 +1,17 @@
 # Data Classes In Python
 
 from dataclasses import dataclass, field
-@dataclass(order=True,eq=True)
+
+@dataclass(order=True,eq=True) 
+ 
+# By using this we Can to customize the,
+# Other properties in the @dataClass which will directly pass when we use the data class
+
 class Animal:
+
+    #  These Variables are called as Fields
      
-    name : str = field(default="Prajeet")
+    name : str = field(default="Prajeet")  #Here we are making them as Default Parameters
     age : int = field(default = 18)
     Address : list = field(default_factory=list)
 

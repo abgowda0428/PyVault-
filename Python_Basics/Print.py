@@ -12,8 +12,6 @@ print("hello",1,1.6,True,sep="*")
 
 name = 'mamau'
 
-print(f"hello my name is {name}")
-
 a = "Abhi"
 b = "Shravana"
 print(a+" "+b)
@@ -27,3 +25,12 @@ print("""hello
 my name is abhi
 I am learning python because i want to become 
 top software engineers in the worls""")
+
+# without using the f-string
+print("my name is",a, "my age is ",num)
+
+#using the format method
+print("My name is {}, My age is {}".format(name,num))
+
+#using the fstring
+print(f"hello my name is {name}")

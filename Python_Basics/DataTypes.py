@@ -54,3 +54,44 @@ print(sci)
 
 print(sys.getsizeof(unit_weigjt))
 print(sys.getsizeof(sci))
+
+# bool - it will hold the two options True or Flase
+
+is_active = True
+in_stock = False
+
+print(is_active)           
+print(type(is_active))     
+print(type(in_stock))      
+print(isinstance(is_active, bool))   
+
+# none - special value meaning no value / nothing here , its nonetype
+supplier = None
+
+print(supplier)            # None
+print(type(supplier))      # <class 'NoneType'>
+print(supplier is None)    # True   <- the way to check for None
+
+# typecasting - converting a value from one type to another using int(),float(),str() and bool()
+
+print(int("120"))       # 120
+print(float("4.5"))     # 4.5
+print(str(120))         # 120   (it's now text; check with type)
+print(type(str(120)))   # <class 'str'>
+
+print(int(3.9))         # 3      truncates, does NOT round
+print(int(-3.9))        # -3
+print(float(5))         # 5.0
+print(int(True))        # 1
+print(int(" 480 "))     # 480    spaces around digits are allowed
+print(str(None))        # None   (but it's now the text "None")
+
+# bool rules 
+
+print(bool(0))        # False
+print(bool(1))        # True
+print(bool(""))       # False   empty string
+print(bool(" "))      # True    not empty
+print(bool("False"))  # True    ← any non-empty text is True
+print(bool(None))     # False
+

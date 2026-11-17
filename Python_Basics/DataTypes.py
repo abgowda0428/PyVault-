@@ -34,5 +34,23 @@ print(isinstance(row_loaded,int))
 
 # python won't allow the leading 0 in the int like , 008 it will throw the syntax error.
 
+# using the sys libary to see the memory allocation for the primitive data types
 print(sys.getsizeof(qty))
 print(sys.getsizeof(row_loaded))
+
+# float - the number with the decimal point
+
+unit_weigjt= 18.98
+weight_kg= 12.78
+whole_but_float= 4.0
+tiny= 0.2
+sci= 1.5e3                  # scientific notation = 1.5 × 10³
+
+print(unit_weigjt)
+print(weight_kg)
+print(whole_but_float)
+print(tiny)
+print(sci)
+
+print(sys.getsizeof(unit_weigjt))
+print(sys.getsizeof(sci))

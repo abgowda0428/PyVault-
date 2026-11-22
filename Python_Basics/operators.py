@@ -17,6 +17,13 @@ print(10 / 2)       # 5.0     still a float, even though it's a whole number
 print(-17 // 5)     # -4      floor goes DOWN to the lower number, not towards zero
 print(-17 % 5)      # 3       the result takes the sign of the right operand
 
+# divmod() - gives the floor division and the remainder together
+seconds = 3725
+minutes, secs = divmod(seconds, 60)
+print(minutes, secs)        # 62 5      handy for converting job run time to min / sec
+
+# % is used a lot in data work: n % 2 == 0 (even), row_number % 1000 == 0 (every 1000th row)
+
 # + and * also work on the strings
 print("abhi" + "gowda")     # abhigowda
 print("ab" * 3)             # ababab
@@ -73,6 +80,11 @@ print(3 and 5)          # 5
 print(0 or 5)           # 5       "or" returns the first truthy value, else the last value
 print("" or "default")  # default  handy for fallback values
 
+# careful - "or" treats 0, 0.0, "" and [] as missing too
+discount = 0                    # a real value: zero discount
+print(discount or 10)           # 10    wrong! the valid 0 got replaced
+print(10 if discount is None else discount)     # 0   correct, only replaces None
+
 # identity operators - is , is not , checks whether both are the SAME object in memory
 
 supplier = None
@@ -86,6 +98,9 @@ print(p == q)       # True    same values
 print(p is q)       # False   different objects in memory
 print(p is r)       # True    r points to the same object as p
 
+# use "is" ONLY for None (and True / False), use "==" to compare values
+# "is" on numbers / strings may look like it works for small values, but it is not reliable
+
 # membership operators - in , not in , checks if a value is present in a sequence
 
 teams = ['CSK', 'MI', 'BNG']
@@ -94,6 +109,13 @@ print('CSK' in teams)           # True
 print('RCB' in teams)           # False
 print('RCB' not in teams)       # True
 print('bhi' in "abhi")          # True    works on the strings too (substring)
+print('name' in {'name': 'abhi'})   # True    on a dict, "in" checks the KEYS
+
+# speed - "in" on a list checks every item one by one (slow for big data)
+# "in" on a set / dict is almost instant, no matter how big it is
+# so when checking millions of ids, convert the list to a set first
+seen_ids = {101, 102, 103}      # a set
+print(102 in seen_ids)          # True
 
 # bitwise operators - &, |, ^, ~, <<, >>  , they work on the binary bits of the int
 
@@ -107,6 +129,13 @@ print(~m)       # -7    NOT, flips the bits, gives -(m + 1)
 print(m << 1)   # 12    shift left by 1, same as m * 2
 print(m >> 1)   # 3     shift right by 1, same as m // 2
 
+# WHY THIS MATTERS FOR DATA ANALYTICS - pandas uses & | ~ for conditions, NOT and / or / not
+# df[(df["age"] > 18) & (df["city"] == "Bangalore")]     both conditions
+# df[(df["status"] == "failed") | (df["retries"] > 3)]  either condition
+# df[~df["is_deleted"]]                                 NOT
+# the brackets around each condition are REQUIRED, because & runs before > and ==
+# using "and" on a pandas column gives: ValueError: The truth value of a Series is ambiguous
+
 # operator precedence - which one runs first (high to low)
 # ** , then unary (+x, -x, ~x) , then * / // % , then + - , then comparisons , then not , and , or
 
@@ -115,7 +144,8 @@ print((2 + 3) * 4)      # 20    brackets change the order
 print(2 ** 3 ** 2)      # 512   ** goes right to left, 2 ** (3 ** 2)
 print(-2 ** 2)          # -4    ** runs before the minus, -(2 ** 2)
 print(True or False and False)  # True   "and" runs before "or"
+# when in doubt, add brackets - it's clearer for the next person reading your code
 
-# walrus operator - := assigns a value and uses it in the same expression
+# walrus operator - := assigns a value and uses it in the same expression (python 3.8+)
 if (length := len("abhishek")) > 5:
     print(length)       # 8

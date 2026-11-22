@@ -61,7 +61,7 @@ Python-Park/
 
 ## 🛠 Requirements
 
-- Python 3.7 or higher
+- Python 3.10 or higher
 - A code editor like VS Code or PyCharm
 
 ---

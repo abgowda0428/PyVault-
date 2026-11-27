@@ -17,6 +17,7 @@ Needs **Python 3.10+** (`match-case` in `conditionals.py` and the `float | None`
 | 6 | [list.py](list.py) | list methods, sorting records, copying, comprehensions, de-duplication, 2D lists |
 | 7 | [conditionals.py](conditionals.py) | `if` / `elif` / `else`, truthy & falsy, data quality checks, `match-case` |
 | 8 | [loops.py](loops.py) | `for`, `while`, `range`, `enumerate`, `zip`, group-by with a dict, retries, batching |
+| 9 | [set.py](set.py) | set methods, union / intersection / difference, subsets, comparing data loads, schema checks, de-duplicating chunks, `frozenset` |
 
 ## Run a file
 
